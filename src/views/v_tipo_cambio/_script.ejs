@@ -1,0 +1,312 @@
+<script>
+
+    $(() => {
+
+        let listarAhora = () => {
+
+            var settings = {
+                "url": "http://localhost:3000/api/currencies",
+                "method": "GET",
+                "timeout": 0,
+            };
+
+            $.ajax(settings).done(function (response) {
+                $(() => {
+
+                    $("#gridContainer").dxDataGrid({
+
+                        dataSource: response
+
+                    });
+
+                    $("#gridContainerOrigen").dxDataGrid({
+
+                        dataSource: response
+
+                    });
+
+                    $("#gridContainerDestino").dxDataGrid({
+
+                        dataSource: response
+
+                    });
+
+
+                });
+            });
+
+        };
+
+        let leerFormulario = () => {
+
+            const tipo_cambio = {
+
+                'moneda': $('#txtMonedaCodigo').val(),
+                'fecha': $('#txtFecha').val(),
+                'valor': $('#txtValor').val(),
+
+
+            };
+
+            return tipo_cambio;
+
+        };
+
+        let leerFormulario02 = () => {
+
+            const tipo_cambio = {
+
+                'monedainicial': $('#txtMonedaCodigoOrigen').val(),
+                'monedafinal': $('#txtMonedaCodigoDestino').val(),
+                'fecha': $('#txtFechaTransaccion').val(),
+                'cantidad': $('#txtValorOrigen').val(),
+
+
+            };
+
+            return tipo_cambio;
+
+        };
+
+        let inicio = () => {
+
+            if ($('#hdnOpcion').val() === '1') {
+
+                $('#frmRegistro').show();
+                $('#frmConvierte').hide();
+
+            } else {
+                $('#frmRegistro').hide();
+                $('#frmConvierte').show();
+            }
+
+
+            $('#txtMonedaCodigo').attr('disabled', 'disabled');
+            $('#txtMonedaDescripcion').attr('disabled', 'disabled');
+            $('#txtMonedaCodigoOrigen').attr('disabled', 'disabled');
+            $('#txtMonedaDescripcionOrigen').attr('disabled', 'disabled');
+            $('#txtMonedaCodigoDestino').attr('disabled', 'disabled');
+            $('#txtMonedaDescripcionDestino').attr('disabled', 'disabled');
+            $('#txtValorDestino').attr('disabled', 'disabled');
+            $('#txtFecha').focus();
+
+            $("#gridContainer").hide();
+            $("#gridContainer").dxDataGrid(dxDataGridModelo);
+            $("#gridContainer").dxDataGrid({
+
+                columns: [
+
+                    //{ dataField: 'id', visible: false },
+                    { caption: 'Código', dataField: 'codigo', dataType: "string", width: 150 },
+                    { caption: 'País', dataField: 'pais', dataType: "string", sortOrder: "asc", width: 150 },
+                    { caption: 'Descripción', dataField: 'descripcion' },
+
+
+                ],
+                onSelectionChanged: (e) => {
+
+                    if (e.selectedRowsData.length !== 0) {
+
+                        let data = e.selectedRowsData;
+
+                        $('#txtMonedaCodigo').val(data[0].codigo);
+                        $('#txtMonedaDescripcion').val(data[0].descripcion);
+
+                        $("#gridContainer").hide();
+                        $('#txtFecha').focus();
+
+                    }
+
+                }
+            });
+
+            $("#gridContainerOrigen").hide();
+            $("#gridContainerOrigen").dxDataGrid(dxDataGridModelo);
+            $("#gridContainerOrigen").dxDataGrid({
+
+                columns: [
+
+                    //{ dataField: 'id', visible: false },
+                    { caption: 'Código', dataField: 'codigo', dataType: "string", width: 150 },
+                    { caption: 'País', dataField: 'pais', dataType: "string", sortOrder: "asc", width: 150 },
+                    { caption: 'Descripción', dataField: 'descripcion' },
+
+
+                ],
+                onSelectionChanged: (e) => {
+
+                    if (e.selectedRowsData.length !== 0) {
+
+                        let data = e.selectedRowsData;
+                        $('#txtMonedaCodigoOrigen').val(data[0].codigo);
+                        $('#txtMonedaDescripcionOrigen').val(data[0].descripcion);
+
+                        $("#gridContainerOrigen").hide();
+                        $('#txtFechaOrigen').focus();
+
+                    }
+
+                }
+            });
+
+            $("#gridContainerDestino").hide();
+            $("#gridContainerDestino").dxDataGrid(dxDataGridModelo);
+            $("#gridContainerDestino").dxDataGrid({
+
+                columns: [
+
+                    //{ dataField: 'id', visible: false },
+                    { caption: 'Código', dataField: 'codigo', dataType: "string", width: 150 },
+                    { caption: 'País', dataField: 'pais', dataType: "string", sortOrder: "asc", width: 150 },
+                    { caption: 'Descripción', dataField: 'descripcion' },
+
+
+                ],
+                onSelectionChanged: (e) => {
+
+                    if (e.selectedRowsData.length !== 0) {
+
+                        let data = e.selectedRowsData;
+
+                        $('#txtMonedaCodigoDestino').val(data[0].codigo);
+                        $('#txtMonedaDescripcionDestino').val(data[0].descripcion);
+
+                        $("#gridContainerDestino").hide();
+                        $('#txtFechaDestino').focus();
+
+                    }
+
+                }
+            });
+            listarAhora();
+
+        };
+
+        let eventos = () => {
+
+            $('#btnTipo').click(() => {
+
+                $("#gridContainer").show();
+
+            });
+
+
+
+            $('#btnTipoOrigen').click(() => {
+
+                $("#gridContainerOrigen").show();
+
+            });
+
+            $('#btnTipoDestino').click(() => {
+
+                $("#gridContainerDestino").show();
+
+            });
+
+            $('#btnGrabar').click(() => {
+
+                const tipo_cambio = leerFormulario();
+
+                var settings = {
+                    "url": "http://localhost:3000/api/exchangerate",
+                    "method": "POST",
+                    "timeout": 0,
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    "data": JSON.stringify({ "moneda": tipo_cambio.moneda, "fecha": tipo_cambio.fecha, "valor": tipo_cambio.valor }),
+                };
+
+                $.ajax(settings).done(function (response) {
+                    //console.log(response);
+                    alert('Éxito');
+                });
+
+            });
+
+            $('#btnProcesar').click(() => {
+
+                const tipo_cambio = leerFormulario02();
+
+                console.log(tipo_cambio);
+
+                var settings = {
+                    "url": "http://localhost:3000/api/exchangerate?monedainicial=" + tipo_cambio.monedainicial + "&monedafinal=" + tipo_cambio.monedafinal + "&fecha=" + tipo_cambio.fecha + "&cantidad=" + tipo_cambio.cantidad,
+                    "method": "GET",
+                    "timeout": 0,
+                };
+
+                $.ajax(settings).done(function (response) {
+
+                    //console.log(response);
+
+                    $('#txtValorDestino').val(response.valor);
+
+                });
+
+            });
+
+
+            /*
+            $('#btnEliminar').click(() => {
+
+                const usuario_tipo = leerFormulario();
+
+                if ($('#txtCodigo').val().trim() === '') {
+
+                    $('#divMensaje').html('Para poder eliminar, debe seleccionar algún elemento');
+
+                } else {
+
+                    (confirm("¿Seguro que desea eliminar?")) ? grabar("/usuario_tipo/delete", usuario_tipo, listarAhora, 'divMensaje') : {};
+
+                }
+
+                $('#btnLimpiar').click();
+
+            });
+
+            $('#btnLimpiar').click(() => {
+
+                $('#txtCodigo').val('');
+                $('#txtDescripcion').val('');
+
+
+                setTimeout(() => {
+                    $('#txtDescripcion').focus();
+                }, 200);
+
+            });
+
+
+            keyup('txtDescripcion', (e) => {
+
+                //(e.keyCode === KEY.ENTER) ? focus('txtApellido') : {};
+                (e.keyCode === KEY.ESC) ? {} : {};
+
+            });
+
+            keyup('btnGrabar', (e) => {
+
+                //(e.keyCode === KEY.ESC) ? focus('txtEmail') : {};
+
+            });
+
+            */
+
+        };
+
+
+        //Ejcución de funciones
+        
+        //$('#frmConvierte').hide();
+        inicio();
+        eventos();
+        $('#divSection').show();
+        
+
+    });
+
+
+</script>

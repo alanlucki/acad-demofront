@@ -1,0 +1,55 @@
+<script>
+
+    $('#lnkArticulos').click(() => {
+
+        navegar("/index/v_articulos", 'divSection');
+
+    });
+
+    $('#lnkUsuarios').click(() => {
+
+        navegar("/index/v_usuarios", 'divSection');
+
+    });
+
+    $('#lnkClientes').click(() => {
+
+        navegar("/index/v_clientes", 'divSection');
+
+    });
+
+    $('#lnkProveedores').click(() => {
+
+        navegar("/index/v_proveedores", 'divSection');
+
+    });
+
+    click('lnkUsuariosTipo', () => {
+
+        navegar("/index/v_usuarios_tipo", 'divSection');
+
+    });
+
+    click('lnkAfiliacion', () => {
+
+        navegar("/index/v_afiliacion", 'divSection');
+
+    });
+
+    click('lnkRegistoTipoCambio', async () => {
+
+        $('#divSection').hide();
+        $('#hdnOpcion').val('1');
+        navegar("/index/v_tipo_cambio", 'divSection');
+        
+    });
+
+    click('lnkConvertidorTipoCambio', () => {
+
+        $('#divSection').hide();
+        $('#hdnOpcion').val('2');
+        navegar("/index/v_tipo_cambio", 'divSection');
+       
+    });
+
+</script>
