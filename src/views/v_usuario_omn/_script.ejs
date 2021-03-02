@@ -1,0 +1,70 @@
+<script>
+  $(() => {
+    let listarAhora = () => {
+      
+      var settings = {
+        url: "http://localhost:5000/listUsers",
+        method: "GET",
+        timeout: 0,
+      };
+
+      $.ajax(settings).done(function (response) {
+        $(() => {
+
+          $("#gridContainer").dxDataGrid({
+            dataSource: response,
+          });
+
+        });
+      });
+
+    };
+
+    let inicio = () => {
+      $("#gridContainer").dxDataGrid(dxDataGridModelo);
+      
+      $("#gridContainer").dxDataGrid({
+        columns: [
+          { 
+            caption: "Id",
+            dataField: '_id', visible: true },
+          {
+            caption: "Email",
+            dataField: "email",
+            dataType: "string",
+            //width: 150,
+          },
+          {
+            caption: "Role",
+            dataField: "role.code",
+            dataType: "string",
+            sortOrder: "asc",
+            //width: 150,
+          },
+          //{ caption: "Descripción", dataField: "descripcion" },
+        ],
+        /*
+        onSelectionChanged: (e) => {
+          if (e.selectedRowsData.length !== 0) {
+            let data = e.selectedRowsData;
+
+            $("#txtMonedaCodigo").val(data[0].codigo);
+            $("#txtMonedaDescripcion").val(data[0].descripcion);
+
+            $("#gridContainer").hide();
+            $("#txtFecha").focus();
+          }
+        },
+        */
+      });
+      listarAhora();
+    };
+
+    let eventos = () => {
+      
+    };
+
+    inicio();
+    $("#divSection").show();
+  });
+</script>

@@ -1,49 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/v_usuario_omn', async (req, res) => {
 
-router.get('/v_afiliacion', async (req, res) => {
-
-    res.render('v_afiliacion', null);
-
-});
-
-
-router.get('/v_articulos', async (req, res) => {
-
-    res.render('v_articulos', null);
-
-});
-
-router.get('/v_clientes', async (req, res) => {
-
-    res.render('v_clientes', null);
-
-});
-
-
-router.get('/v_proveedores', async (req, res) => {
-
-    res.render('v_proveedores', null);
-
-});
-
-
-router.get('/v_usuarios', async (req, res) => {
-
-    res.render('v_usuarios', null);
-
-});
-
-router.get('/v_usuarios_tipo', async (req, res) => {
-
-    res.render('v_usuarios_tipo', null);
-
-});
-
-router.get('/v_tipo_cambio', async (req, res) => {
-
-    res.render('v_tipo_cambio', null);
+    res.render('v_usuario_omn', null);
 
 });
 

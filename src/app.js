@@ -3,9 +3,6 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 
-const afiliacionRoutes = require('./routes/r_afiliacion');
-const usuarioRoutes = require('./routes/r_usuario');
-const usuario_tipoRoutes = require('./routes/r_usuario_tipo');
 const indexRoutes = require('./routes/r_index');
 
 const app = express();
@@ -27,9 +24,6 @@ app.use('/image', express.static(__dirname + '/public/image'));
 
 
 // routes
-app.use('/afiliacion', afiliacionRoutes);
-app.use('/usuario_tipo', usuario_tipoRoutes);
-app.use('/usuario', usuarioRoutes);
 app.use('/index', indexRoutes);
 app.use('/', indexRoutes);
 app.use('*', indexRoutes);
