@@ -1,7 +1,6 @@
 <script>
   $(() => {
     let listarAhora = () => {
-      
       var settings = {
         url: "http://localhost:5000/listUsers",
         method: "GET",
@@ -10,24 +9,58 @@
 
       $.ajax(settings).done(function (response) {
         $(() => {
-
           $("#gridContainer").dxDataGrid({
             dataSource: response,
           });
-
         });
       });
-
     };
 
     let inicio = () => {
       $("#gridContainer").dxDataGrid(dxDataGridModelo);
-      
+
       $("#gridContainer").dxDataGrid({
         columns: [
-          { 
+          {
+            caption: "Fila",
+            dataField: "Fila",
+            dataType: "number",
+            format: "###,###,##0",
+            width: 60,
+            cellTemplate: function (container, options) {
+              $("<div>")
+                .append(
+                  options.component.pageIndex() * options.component.pageSize() +
+                    options.rowIndex +
+                    1
+                )
+                .appendTo(container);
+            },
+          },
+
+          {
             caption: "Id",
-            dataField: '_id', visible: true },
+            dataField: "_id",
+            visible: true,
+          },
+          {
+            caption: "Nombre",
+            dataField: "names",
+            dataType: "string",
+            //width: 150,
+          },
+          {
+            caption: "Paterno",
+            dataField: "lastName",
+            dataType: "string",
+            //width: 150,
+          },
+          {
+            caption: "Materno",
+            dataField: "secondLastName",
+            dataType: "string",
+            //width: 150,
+          },
           {
             caption: "Email",
             dataField: "email",
@@ -40,9 +73,58 @@
             dataType: "string",
             sortOrder: "asc",
             //width: 150,
-          }
+          },
+          {
+            caption: "Status",
+            dataField: "status.code",
+            dataType: "string",
+            sortOrder: "asc",
+            //width: 150,
+          },
+          {
+            caption: "createdAt",
+            dataField: "createdAt",
+            dataType: "string",
+            sortOrder: "asc",
+            //width: 150,
+          },
+          {
+            caption: "password",
+            dataField: "password",
+            dataType: "string",
+            sortOrder: "asc",
+            //width: 150,
+          },
+          {
+            caption: "createdBy",
+            dataField: "createdBy.user.email",
+            dataType: "string",
+            sortOrder: "asc",
+            //width: 150,
+          },
+
+          //createdAt
           //{ caption: "Descripción", dataField: "descripcion" },
         ],
+        summary: {
+          groupItems: [
+            {
+              column: "Email",
+              summaryType: "count",
+            },
+            // ...
+          ],
+          totalItems: [
+            {
+              column: "Fila",
+              cssClass: "font-weight-400 color-blue ff-consolas",
+              summaryType: "count",
+              customizeText: function (a) {
+                return millares_comas(a.value);
+              },
+            },
+          ],
+        },
         /*
         onSelectionChanged: (e) => {
           if (e.selectedRowsData.length !== 0) {
@@ -60,9 +142,7 @@
       listarAhora();
     };
 
-    let eventos = () => {
-      
-    };
+    let eventos = () => {};
 
     inicio();
     $("#divSection").show();

@@ -1,32 +1,3 @@
-const listarBcp = (p00, p01, p02) => {
-    /*
-    * p00 : url
-    * p01 : nombre de dxDataGrid
-    * p02 : conjunto de objetos => usuario
-    */
-    //console.log('listarBcp');
-
-    var settings = {
-        "url": "http://localhost:3000/api/currencies",
-        "method": "GET",
-        "timeout": 0,
-    };
-
-    $.ajax(settings).done(function (response) {
-        //console.log(response);
-        $(() => {
-
-            $("#" + p01).dxDataGrid({
-
-                dataSource: response//JSON.parse(JSON.stringify(response))
-
-            });
-
-        });
-    });
-
-};
-
 const listar = (p00, p01, p02) => {
     /*
     * p00 : url
@@ -116,18 +87,18 @@ const navegar = (p00, p01) => {
 
 const dxDataGridModelo = {
 
-    //groupPanel: { visible: true },
-    grouping: { autoExpandAll: false },
+    groupPanel: { visible: true },
+    grouping: { autoExpandAll: true },
     loadPanel: { enabled: true },
     allowColumnReordering: true,
     allowColumnResizing: true,
     columnResizingMode: ["nextColumn"][0],
     columnChooser: { enabled: true },
     filterPanel: { visible: true },
-    selection: { mode: ["single", "multiple"][0] },
+    //selection: { mode: ["single", "multiple"][0] },
     sorting: { mode: "single" },
-    paging: { pageSize: 5 },
-    pager: { showPageSizeSelector: true, allowedPageSizes: [5, 10, 25, 50, 100, 1000] },
+    paging: { pageSize: 20 },
+    pager: { showPageSizeSelector: true, allowedPageSizes: [5, 10, 25, 50, 100, 1000, 10000, 100000] },
     showColumnLines: true,
     showRowLines: true,
     showBorders: true,
@@ -147,19 +118,8 @@ const dxDataGridModelo = {
             }
 
         } else {
-
-            /*
-            if (options.columnIndex === 1) {
-
-                options.cellElement.addClass("ff-Calibri");
-
-            } else {
-
-                options.cellElement.addClass("ff-consolas");
-
-            }*/
-
-            options.cellElement.addClass("ff-Calibri");
+            
+            options.cellElement.addClass("ff-consolas");
         }
 
     },
