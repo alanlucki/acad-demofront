@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "start chrome http://localhost:3001/ && node src/app.js",
-    "dev": "start chrome http://localhost:3001/ && nodemon src/app.js"
+    "dev": "start chrome http://localhost:3001/ && nodemon src/app.js",
+    "format:routes": "prettier --write \"src/routes/*\"",
+    "all:dev": "npm run format:routes && npm run format:routes"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +16,8 @@
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "mongoose": "^5.7.7",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "prettier": "^2.2.1"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
