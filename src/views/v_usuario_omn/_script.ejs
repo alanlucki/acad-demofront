@@ -1,5 +1,6 @@
 <script>
   $(() => {
+    /*
     let listarAhora = () => {
       var settings = {
         url: 'http://localhost:5000/listUsers',
@@ -7,21 +8,635 @@
         timeout: 0,
       };
 
+      var datos = [
+              {
+                "Aportante":'Aportante',
+                "Importe":100.00
+              }
+            ]
+
+      console.log( datos )        
+            
       $.ajax(settings).done(function (response) {
         $(() => {
           $('#gridContainer').dxDataGrid({
-            dataSource: response,
+            dataSource: datos
           });
         });
       });
     };
-
+    */
     let inicio = () => {
       $('#gridContainer').dxDataGrid(dxDataGridModelo);
 
+      var datos = [
+        
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31098',
+          "operacion": '01676524',
+          "importe": 40.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Lenin',
+          "importe": 200.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Steffany',
+          "importe": 20.00
+        }
+        , 
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 02:59 hrs.',
+          "importe": 200.00
+        }
+        , 
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 02:08 hrs.',
+          "importe": 10.00
+        }
+        , 
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Karolina',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 00:59 hrs.',
+          "importe": 10.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Valyha',
+          "importe": 35.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Violeta',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Fredy',
+          "importe": 1000.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": 'Estefani',
+          "importe": 10.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 22:56 hrs.',
+          "importe": 5.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Robert',
+          "importe": 25.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 19:35 hrs.',
+          "importe": 5.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Dulce',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Rosina',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 19:35 hrs.',
+          "importe": 15.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 19:28 hrs.',
+          "importe": 15.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Angiello',
+          "importe": 10.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Nery',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 17:54 hrs.',
+          "importe": 250.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'Plin',
+          "operacion": '15/06/2021 17:23 hrs.',
+          "importe": 5.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Victor Miguel',
+          "importe": 1000.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Mabel',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'Continental',
+          "descripcion": 'ABO TRASPASO ',
+          "operacion": 'Hubert',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'TRANSF WEB/APP',
+          "operacion": 'mar. 15 jun 22:01',
+          "importe": 30.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'TRANSF WEB/APP',
+          "operacion": 'mar. 15 jun 21:14',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'TRANSF WEB/APP',
+          "operacion": 'mar. 15 jun 20:30',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'TRANSF WEB/APP',
+          "operacion": 'mar. 15 jun 19:44',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'DEPOSITO AGENTE',
+          "operacion": 'mar. 15 jun 13:46',
+          "importe": 70.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'TRANSF WEB/APP',
+          "operacion": 'mar. 15 jun 12:15',
+          "importe": 10.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'DEPOSITO CAJERO',
+          "operacion": 'mar. 15 jun 11:54',
+          "importe": 70.00
+        }
+        ,
+        {
+          "medio": 'Interbank',
+          "descripcion": 'TRANSF WEB/APP',
+          "operacion": 'mar. 15 jun 11:46',
+          "importe": 30.00
+        }
+        ,
+        {
+          "medio": 'Scotiabank',
+          "descripcion": 'Transferencia',
+          "operacion": '784.465.555.4848',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'Scotiabank',
+          "descripcion": 'Transferencia',
+          "operacion": '784.465.554.0202',
+          "importe": 150.00
+        }
+        ,
+        {
+          "medio": 'Scotiabank',
+          "descripcion": 'Transferencia',
+          "operacion": '784.465.552.8531',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'Scotiabank',
+          "descripcion": 'Depósito en efectivo',
+          "operacion": '360.050.001.0040',
+          "importe": 500.00
+        }
+        ,
+        {
+          "medio": 'Scotiabank',
+          "descripcion": 'Transferencia',
+          "operacion": '784.465.551.5730',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31093',
+          "operacion": '08739885',
+          "importe": 15.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 19126',
+          "operacion": '09125813',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '99814857',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '99475179',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 19195',
+          "operacion": '04045328',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 57000',
+          "operacion": '00840224',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '96703240',
+          "importe": 5.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '96598143',
+          "importe": 27.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 57038',
+          "operacion": '03011415',
+          "importe": 5.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '95724452',
+          "importe": 25.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '94917373',
+          "importe": 30.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '94085728',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'COM.OP.OTRA.LOCAL',
+          "operacion": '00616733',
+          "importe": -9.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRA O/CTA - AGENTE',
+          "operacion": '00616733',
+          "importe": 200.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'COM.OP.OTRA.LOCAL',
+          "operacion": '00590336',
+          "importe": -9.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRA O/CTA - AGENTE',
+          "operacion": '00590336',
+          "importe": 250.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'COM.OP.OTRA.LOCAL',
+          "operacion": '00540025',
+          "importe": -9.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRA O/CTA - AGENTE',
+          "operacion": '00540025',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'COM.OP.OTRA.LOCAL',
+          "operacion": '00531280',
+          "importe": -9.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRA O/CTA - AGENTE',
+          "operacion": '00531280',
+          "importe": 300.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'COM.OP.OTRA.LOCAL',
+          "operacion": '00519358',
+          "importe": -9.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRA O/CTA - AGENTE',
+          "operacion": '00519358',
+          "importe": 300.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'DEP.EN EFECTIVO',
+          "operacion": '00554627',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'COM.OP.OTRA.LOCAL',
+          "operacion": '00405084',
+          "importe": -9.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRA O/CTA - AGENTE',
+          "operacion": '00376784',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '90376784',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31001',
+          "operacion": '00260462',
+          "importe": 10.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRA O/CTA - AGENTE',
+          "operacion": '00260462',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 30000',
+          "operacion": '00506554',
+          "importe": 200.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31093',
+          "operacion": '08782672',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31092',
+          "operacion": '07680474',
+          "importe": 20.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '85656809',
+          "importe": 300.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 30595',
+          "operacion": '',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 19338',
+          "operacion": '',
+          "importe": 50.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31092',
+          "operacion": '',
+          "importe": 30.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 21524',
+          "operacion": '',
+          "importe": 200.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Rifa',
+          "operacion": '',
+          "importe": 5.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31099',
+          "operacion": '',
+          "importe": 12.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'Pago YAPE de 31099',
+          "operacion": '',
+          "importe": 12.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '82028706',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '80501077',
+          "importe": 100.00
+        }
+        ,
+        {
+          "medio": 'BCP',
+          "descripcion": 'YAPE',
+          "operacion": 'Pago YAPE de 31',
+          "importe": 100.00
+        }
+        
+        
+        
+        
+        ,
+        {
+          "medio": 'BCP - LIMA',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '97341261',
+          "importe": 30.00
+        }
+        ,
+        {
+          "medio": 'BCP - LIMA',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '92810604',
+          "importe": 245.00
+        }
+        ,
+        {
+          "medio": 'BCP - LIMA',
+          "descripcion": 'TRAN.CTAS.TERC.BM',
+          "operacion": '97173597',
+          "importe": 250.00
+        }
+      ]
+
+      $('#formHistoria').hide();
+      $('#formCuentas').show();
+
       $('#gridContainer').dxDataGrid({
-        columns: [
-          {
+        dataSource: datos,
+        columns: [{
             caption: 'Fila',
             dataField: 'Fila',
             dataType: 'number',
@@ -31,8 +646,8 @@
               $('<div>')
                 .append(
                   options.component.pageIndex() * options.component.pageSize() +
-                    options.rowIndex +
-                    1,
+                  options.rowIndex +
+                  1,
                 )
                 .appendTo(container);
             },
@@ -41,101 +656,150 @@
           {
             caption: 'Id',
             dataField: '_id',
-            visible: true,
+            visible: false,
           },
           {
-            caption: 'Nombre',
-            dataField: 'names',
+            caption: 'Medio de Pago',
+            dataField: 'medio',
             dataType: 'string',
             //width: 150,
           },
           {
-            caption: 'Paterno',
-            dataField: 'lastName',
+            caption: 'Descripción',
+            dataField: 'descripcion',
             dataType: 'string',
             //width: 150,
           },
           {
-            caption: 'Materno',
-            dataField: 'secondLastName',
+            caption: 'Operacion',
+            dataField: 'operacion',
             dataType: 'string',
             //width: 150,
           },
           {
-            caption: 'Email',
-            dataField: 'email',
-            dataType: 'string',
+            caption: 'Importe',
+            dataField: 'importe',
+            dataType: 'number',
+            format: '###,###,##0.00'
             //width: 150,
-          },
-          {
-            caption: 'Role',
-            dataField: 'role.code',
-            dataType: 'string',
-            sortOrder: 'asc',
-            //width: 150,
-          },
-          {
-            caption: 'Status',
-            dataField: 'status.code',
-            dataType: 'string',
-            sortOrder: 'asc',
-            //width: 150,
-          },
-          {
-            caption: 'createdAt',
-            dataField: 'createdAt',
-            dataType: 'string',
-            sortOrder: 'asc',
-            //width: 150,
-          },
-          {
-            caption: 'password',
-            dataField: 'password',
-            dataType: 'string',
-            sortOrder: 'asc',
-            //width: 150,
-          },
-          {
-            caption: 'createdBy',
-            dataField: 'createdBy.user.email',
-            dataType: 'string',
-            sortOrder: 'asc',
-            //width: 150,
-          },
-          {
-            caption: 'Menu',
-            dataField: 'menu',
-            //dataType: 'string',
-            //sortOrder: 'asc',
-            //width: 150,
-          },
+          }
         ],
         summary: {
-          groupItems: [
-            {
-              column: 'Email',
-              summaryType: 'count',
+          groupItems: [{
+              column: 'Importe',
+              summaryType: 'sum',
+              format: '###,###,##0.00'
             },
             // ...
           ],
-          totalItems: [
-            {
-              column: 'Fila',
-              cssClass: 'font-weight-400 color-blue ff-consolas',
-              summaryType: 'count',
-              customizeText: function (a) {
-                return millares_comas(a.value);
-              },
+          totalItems: [{
+            column: 'Fila',
+            cssClass: 'font-weight-400 color-blue ff-consolas',
+            summaryType: 'count',
+            customizeText: function (a) {
+              return millares_comas(a.value);
             },
-          ],
+          }, {
+            column: 'Importe',
+            cssClass: 'font-weight-400 color-blue ff-consolas',
+            summaryType: 'sum',
+            customizeText: function (a) {
+
+              $('#txtRecaudado').val(millares_comas(a.value))
+
+              var n = a.value
+              var m = parseFloat($('#txtMeta').val().replace(',', ''))
+              var r = n / m
+              console.log(porcentajes_02(r))
+
+              $('#txtAvance').val(porcentajes_02(r))
+              return millares_comas(a.value);
+            },
+          }, ],
         },
       });
-      listarAhora();
+      //listarAhora();
+      $('#btnCuentas').click(() => {
+
+        $('#formHistoria').hide();
+        $('#formCuentas').show();
+
+      })
+      $('#btnHistoria').click(() => {
+
+        $('#formCuentas').hide();
+        $('#formHistoria').show();
+
+      })
+      $('#btn01').click(() => {
+
+        var copyText = document.querySelector("#txt01");
+        copyText.select();
+        document.execCommand("copy");
+
+      })
+      $('#btn02').click(() => {
+
+        var copyText = document.querySelector("#txt02");
+        copyText.select();
+        document.execCommand("copy");
+
+      })
+      $('#btn03').click(() => {
+
+        var copyText = document.querySelector("#txt03");
+        copyText.select();
+        document.execCommand("copy");
+
+      })
+      $('#btn04').click(() => {
+
+        var copyText = document.querySelector("#txt04");
+        copyText.select();
+        document.execCommand("copy");
+
+      })
+      $('#btn05').click(() => {
+
+        var copyText = document.querySelector("#txt05");
+        copyText.select();
+        document.execCommand("copy");
+
+      })
+      $('#btn06').click(() => {
+
+        var copyText = document.querySelector("#txt06");
+        copyText.select();
+        document.execCommand("copy");
+
+      })
+      $('#btn07').click(() => {
+
+        var copyText = document.querySelector("#txt07");
+        copyText.select();
+        document.execCommand("copy");
+
+      })
+
+
+
     };
 
     let eventos = () => {};
 
     inicio();
     $('#divSection').show();
+
+
+    /*
+    function myFunction() {
+      var copyText = document.getElementsByClassName('cuentas')
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Copied the text: " + copyText.value);
+    }
+    */
+
   });
 </script>

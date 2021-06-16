@@ -20,7 +20,7 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use('/css', express.static(__dirname + '/public/css'));
 app.use('/js', express.static(__dirname + '/public/js'));
 app.use('/dx', express.static(__dirname + '/public/dx'));
-app.use('/image', express.static(__dirname + '/public/image'));
+app.use('/images', express.static(__dirname + '/public/images'));
 
 
 // routes
@@ -32,7 +32,7 @@ app.set('view engine', 'ejs');
 
 
 // starting the server
-app.listen(3001, () => {
+app.listen(8888, () => {
 
     console.log('Server on port 3001');
 

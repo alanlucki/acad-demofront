@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "start chrome http://localhost:3001/ && node src/app.js",
-    "dev": "start chrome http://localhost:3001/ && nodemon src/app.js",
+    "start": "node src/app.js",
+    "dev": "start chrome http://localhost:8888/ && nodemon src/app.js",
     "format:routes": "prettier --write \"src/routes/*\"",
-    "all:dev": "npm run format:routes && npm run format:routes"
+    "all:dev": "npm run format:routes && npm run format:routes",
+    "ceci-zip": "timestamp=$(date \"+%d-%m-%Y_%H-%M-%S\") && bestzip ceci-$timestamp.zip src/**  package.json",
+    "ceci-deploy": "rm -rf *.zip && npm run ceci-zip && scp *.zip Sociedad:/home/ec2-user/alan && rm -rf *.zip",
+    "ceci": "pm2 start src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +23,7 @@
     "prettier": "^2.2.1"
   },
   "devDependencies": {
+    "bestzip": "1.1.4",
     "nodemon": "^1.19.4"
   }
 }
