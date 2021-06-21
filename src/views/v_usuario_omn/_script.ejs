@@ -29,607 +29,232 @@
     let inicio = () => {
       $('#gridContainer').dxDataGrid(dxDataGridModelo);
 
-      var datos = [
-        
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31098',
-          "operacion": '01676524',
-          "importe": 40.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Lenin',
-          "importe": 200.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Steffany',
-          "importe": 20.00
-        }
-        , 
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 02:59 hrs.',
-          "importe": 200.00
-        }
-        , 
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 02:08 hrs.',
-          "importe": 10.00
-        }
-        , 
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Karolina',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 00:59 hrs.',
-          "importe": 10.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Valyha',
-          "importe": 35.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Violeta',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Fredy',
-          "importe": 1000.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": 'Estefani',
-          "importe": 10.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 22:56 hrs.',
-          "importe": 5.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Robert',
-          "importe": 25.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 19:35 hrs.',
-          "importe": 5.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Dulce',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Rosina',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 19:35 hrs.',
-          "importe": 15.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 19:28 hrs.',
-          "importe": 15.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Angiello',
-          "importe": 10.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Nery',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 17:54 hrs.',
-          "importe": 250.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'Plin',
-          "operacion": '15/06/2021 17:23 hrs.',
-          "importe": 5.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Victor Miguel',
-          "importe": 1000.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Mabel',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'Continental',
-          "descripcion": 'ABO TRASPASO ',
-          "operacion": 'Hubert',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'TRANSF WEB/APP',
-          "operacion": 'mar. 15 jun 22:01',
-          "importe": 30.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'TRANSF WEB/APP',
-          "operacion": 'mar. 15 jun 21:14',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'TRANSF WEB/APP',
-          "operacion": 'mar. 15 jun 20:30',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'TRANSF WEB/APP',
-          "operacion": 'mar. 15 jun 19:44',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'DEPOSITO AGENTE',
-          "operacion": 'mar. 15 jun 13:46',
-          "importe": 70.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'TRANSF WEB/APP',
-          "operacion": 'mar. 15 jun 12:15',
-          "importe": 10.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'DEPOSITO CAJERO',
-          "operacion": 'mar. 15 jun 11:54',
-          "importe": 70.00
-        }
-        ,
-        {
-          "medio": 'Interbank',
-          "descripcion": 'TRANSF WEB/APP',
-          "operacion": 'mar. 15 jun 11:46',
-          "importe": 30.00
-        }
-        ,
-        {
-          "medio": 'Scotiabank',
-          "descripcion": 'Transferencia',
-          "operacion": '784.465.555.4848',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'Scotiabank',
-          "descripcion": 'Transferencia',
-          "operacion": '784.465.554.0202',
-          "importe": 150.00
-        }
-        ,
-        {
-          "medio": 'Scotiabank',
-          "descripcion": 'Transferencia',
-          "operacion": '784.465.552.8531',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'Scotiabank',
-          "descripcion": 'Depósito en efectivo',
-          "operacion": '360.050.001.0040',
-          "importe": 500.00
-        }
-        ,
-        {
-          "medio": 'Scotiabank',
-          "descripcion": 'Transferencia',
-          "operacion": '784.465.551.5730',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31093',
-          "operacion": '08739885',
-          "importe": 15.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 19126',
-          "operacion": '09125813',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '99814857',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '99475179',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 19195',
-          "operacion": '04045328',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 57000',
-          "operacion": '00840224',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '96703240',
-          "importe": 5.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '96598143',
-          "importe": 27.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 57038',
-          "operacion": '03011415',
-          "importe": 5.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '95724452',
-          "importe": 25.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '94917373',
-          "importe": 30.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '94085728',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'COM.OP.OTRA.LOCAL',
-          "operacion": '00616733',
-          "importe": -9.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRA O/CTA - AGENTE',
-          "operacion": '00616733',
-          "importe": 200.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'COM.OP.OTRA.LOCAL',
-          "operacion": '00590336',
-          "importe": -9.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRA O/CTA - AGENTE',
-          "operacion": '00590336',
-          "importe": 250.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'COM.OP.OTRA.LOCAL',
-          "operacion": '00540025',
-          "importe": -9.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRA O/CTA - AGENTE',
-          "operacion": '00540025',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'COM.OP.OTRA.LOCAL',
-          "operacion": '00531280',
-          "importe": -9.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRA O/CTA - AGENTE',
-          "operacion": '00531280',
-          "importe": 300.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'COM.OP.OTRA.LOCAL',
-          "operacion": '00519358',
-          "importe": -9.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRA O/CTA - AGENTE',
-          "operacion": '00519358',
-          "importe": 300.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'DEP.EN EFECTIVO',
-          "operacion": '00554627',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'COM.OP.OTRA.LOCAL',
-          "operacion": '00405084',
-          "importe": -9.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRA O/CTA - AGENTE',
-          "operacion": '00376784',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '90376784',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31001',
-          "operacion": '00260462',
-          "importe": 10.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRA O/CTA - AGENTE',
-          "operacion": '00260462',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 30000',
-          "operacion": '00506554',
-          "importe": 200.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31093',
-          "operacion": '08782672',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31092',
-          "operacion": '07680474',
-          "importe": 20.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '85656809',
-          "importe": 300.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 30595',
-          "operacion": '',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 19338',
-          "operacion": '',
-          "importe": 50.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31092',
-          "operacion": '',
-          "importe": 30.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 21524',
-          "operacion": '',
-          "importe": 200.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Rifa',
-          "operacion": '',
-          "importe": 5.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31099',
-          "operacion": '',
-          "importe": 12.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'Pago YAPE de 31099',
-          "operacion": '',
-          "importe": 12.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '82028706',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '80501077',
-          "importe": 100.00
-        }
-        ,
-        {
-          "medio": 'BCP',
-          "descripcion": 'YAPE',
-          "operacion": 'Pago YAPE de 31',
-          "importe": 100.00
-        }
-        
-        
-        
-        
-        ,
-        {
-          "medio": 'BCP - LIMA',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '97341261',
-          "importe": 30.00
-        }
-        ,
-        {
-          "medio": 'BCP - LIMA',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '92810604',
-          "importe": 245.00
-        }
-        ,
-        {
-          "medio": 'BCP - LIMA',
-          "descripcion": 'TRAN.CTAS.TERC.BM',
-          "operacion": '97173597',
-          "importe": 250.00
-        }
-      ]
+var datos = [
+
+// efectivo
+
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Chana'              ,"operacion": '0000014',"importe": 1000.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Lester'             ,"operacion": '0000013',"importe": 1000.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Victor Miguel'      ,"operacion": '0000012',"importe": 1000.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Manuel'             ,"operacion": '0000011',"importe": 1000.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Lucki'              ,"operacion": '0000010',"importe": 1000.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Jose'               ,"operacion": '0000009',"importe": 2000.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Abraham'            ,"operacion": '0000008',"importe": 500.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Meche'              ,"operacion": '0000007',"importe": 200.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Calderon'           ,"operacion": '0000006',"importe": 100.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Anthony'            ,"operacion": '0000005',"importe": 800.00},
+{"fecha": '13-06-2021',"medio": 'Efectivo',"descripcion": 'Jhanlui'            ,"operacion": '0000004',"importe": 817.70},
+{"fecha": '14-06-2021',"medio": 'Efectivo',"descripcion": 'Esther'             ,"operacion": '0000003',"importe": 1000.00},
+{"fecha": '18-06-2021',"medio": 'Efectivo',"descripcion": 'Lozano Vasquez'     ,"operacion": '0000002',"importe": 200.00},
+{"fecha": '18-06-2021',"medio": 'Efectivo',"descripcion": 'Miguel de la Quin'  ,"operacion": '0000001',"importe": 1000.00},
+
+// bcp lima
+
+{"fecha": '19-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '00573199',"importe": 1115.00},
+{"fecha": '19-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '00456980',"importe": 1480.00},
+
+{"fecha": '16-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '00223666',"importe": 15.00},
+{"fecha": '16-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '03491527',"importe": 100.00},
+{"fecha": '16-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRA O/CTA - AGENTE ',"operacion": '00703401',"importe": 60.00},
+{"fecha": '16-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '08800033',"importe": 100.00},
+
+{"fecha": '15-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM',"operacion": '97341261',"importe": 30.00},
+{"fecha": '15-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM',"operacion": '92810604',"importe": 245.00},
+{"fecha": '15-06-2021',"medio": 'Bcp - LIMA',"descripcion": 'TRAN.CTAS.TERC.BM',"operacion": '97173597',"importe": 250.00},
+
+// bcp
+
+{"fecha": '20-06-2021',"medio": 'Bcp',"descripcion": 'ABON YAPE'          ,"operacion": '00821606',"importe": 50.00},
+{"fecha": '20-06-2021',"medio": 'Bcp',"descripcion": 'ABON YAPE'          ,"operacion": '00821127',"importe": 150.00},
+
+{"fecha": '19-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '08175345',"importe": 30.00},
+{"fecha": '19-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31038' ,"operacion": '05295284',"importe": 30.00},
+{"fecha": '19-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31095' ,"operacion": '02425075',"importe": 500.00},
+{"fecha": '19-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '04296930',"importe": 100.00},
+{"fecha": '19-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31016' ,"operacion": '04832060',"importe": 20.00},
+{"fecha": '19-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31000' ,"operacion": '09840103',"importe": 5.00},
+
+{"fecha": '18-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00351816',"importe": 40.00},
+{"fecha": '18-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '06487591',"importe": 100.00},
+{"fecha": '18-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 19435' ,"operacion": '00740496',"importe": 20.00},
+
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31000' ,"operacion": '02836581',"importe": 30.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00222586',"importe": 50.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '05614878',"importe": 100.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 19338' ,"operacion": '07243776',"importe": 50.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL'  ,"operacion": '00991518',"importe": -9.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00991518',"importe": 100.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'ABON YAPE'          ,"operacion": '00773280',"importe": 50.00},
+
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL  ',"operacion": '00739500',"importe": -9.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE ',"operacion": '00739500',"importe": 200.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 19435 ',"operacion": '04048712',"importe": 200.00},
+{"fecha": '17-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE ',"operacion": '00349016',"importe": 50.00},
+
+
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '02270847',"importe": 20.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31000 ',"operacion": '00719961',"importe": 10.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 21590 ',"operacion": '06645773',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 30093 ',"operacion": '00906982',"importe": 100.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31030 ',"operacion": '09515456',"importe": 5.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31039 ',"operacion": '05444913',"importe": 100.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31001 ',"operacion": '09366494',"importe": 100.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA – AGENTE ',"operacion": '00841962',"importe": 300.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.HK  ',"operacion": '00109600',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA – AGENTE ',"operacion": '00566104',"importe": 20.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '08739745',"importe": 20.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 21526 ',"operacion": '00341483',"importe": 80.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 57002 ',"operacion": '03354226',"importe": 5.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31014 ',"operacion": '01429354',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE ',"operacion": '00047681',"importe": 400.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'COM.OPE.VENT       ',"operacion": '00250874',"importe": -9.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'DEP.EN EFECTIVO    ',"operacion": '00250874',"importe": 19.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '03415904',"importe": 100.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA – AGENTE ',"operacion": '00002850',"importe": 110.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'ABON YAPE  '        ,"operacion": '00077044',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '02422019',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM  ',"operacion": '01764448',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.PROP.    ',"operacion": '0015269',"importe": 525.00},
+{"fecha": '16-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31098' ,"operacion": '01676524',"importe": 40.00},
+
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31093' ,"operacion": '08739885',"importe": 15.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 19126' ,"operacion": '09125813',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '99814857',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '99475179',"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 19195' ,"operacion": '04045328',"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 57000' ,"operacion": '00840224',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM ' ,"operacion": '96703240',"importe": 5.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM ' ,"operacion": '96598143',"importe": 27.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 57038' ,"operacion": '03011415',"importe": 5.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM ' ,"operacion": '95724452',"importe": 25.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM ' ,"operacion": '94917373',"importe": 30.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '94085728',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL'  ,"operacion": '00616733',"importe": -9.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00616733',"importe": 200.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL'  ,"operacion": '00590336',"importe": -9.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00590336',"importe": 250.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL'  ,"operacion": '00540025',"importe": -9.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00540025',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL'  ,"operacion": '00531280',"importe": -9.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00531280',"importe": 300.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL'  ,"operacion": '00519358',"importe": -9.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00519358',"importe": 300.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'DEP.EN EFECTIVO'    ,"operacion": '00554627',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'COM.OP.OTRA.LOCAL'  ,"operacion": '00405084',"importe": -9.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00376784',"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '90376784',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31001' ,"operacion": '00260462',"importe": 10.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRA O/CTA - AGENTE' ,"operacion": '00260462',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 30000' ,"operacion": '00506554',"importe": 200.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31093' ,"operacion": '08782672',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31092' ,"operacion": '07680474',"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '85656809',"importe": 300.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 30595' ,"operacion": '',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 19338' ,"operacion": '',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31092' ,"operacion": '',"importe": 30.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 21524' ,"operacion": '',"importe": 200.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Rifa'               ,"operacion": '',"importe": 5.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31099' ,"operacion": '',"importe": 12.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'Pago YAPE de 31099' ,"operacion": '',"importe": 12.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '82028706',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'TRAN.CTAS.TERC.BM'  ,"operacion": '80501077',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Bcp',"descripcion": 'YAPE'               ,"operacion": 'Pago YAPE de 31',"importe": 100.00} ,
+
+//continental
+{"fecha": '20-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Maruja' ,"importe": 30.00},
+
+{"fecha": '18-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Katherine' ,"importe": 50.00},
+{"fecha": '18-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Paula'     ,"importe": 10.00},
+{"fecha": '18-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Sirly'     ,"importe": 100.00},
+{"fecha": '18-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Kenny'     ,"importe": 50.00},
+{"fecha": '18-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Miguel'    ,"importe": 20.00},
+
+{"fecha": '17-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Victor'      ,"importe": 3000.00},
+{"fecha": '17-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Julia'       ,"importe": 50.00},
+{"fecha": '17-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '14:02 hrs.'  ,"importe": 20.00},
+{"fecha": '17-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Josseline'   ,"importe": 5.00},
+
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '04:43 hrs.'  ,"importe": 30.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Norma'       ,"importe": 25.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Cesar'       ,"importe": 200.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Ernesto'     ,"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Guillermo'   ,"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Yolanda'     ,"importe": 140.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '16:57 hrs.'  ,"importe": 5.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '16:29 hrs.'  ,"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '16:22 hrs.'  ,"importe": 20.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Roberto'     ,"importe": 100.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Julia'       ,"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Cesar'       ,"importe": 500.00},
+
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Lenin'       ,"importe": 200.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO' ,"operacion": 'Steffany'    ,"importe": 20.00}, 
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '02:59 hrs.'  ,"importe": 200.00}, 
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '02:08 hrs.'  ,"importe": 10.00}, 
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Karolina'    ,"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '00:59 hrs.'  ,"importe": 10.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Valyha'      ,"importe": 35.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Violeta'     ,"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Fredy'       ,"importe": 1000.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": 'Estefani'    ,"importe": 10.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '22:56 hrs.'  ,"importe": 5.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Robert'      ,"importe": 25.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '19:35 hrs.'  ,"importe": 5.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Dulce'       ,"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Rosina'      ,"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '19:35 hrs.'  ,"importe": 15.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '19:28 hrs.'  ,"importe": 15.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Angiello'    ,"importe": 10.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Nery'        ,"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '17:54 hrs.'  ,"importe": 250.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'Plin'         ,"operacion": '17:23 hrs.'  ,"importe": 5.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Victor Migue',"importe": 1000.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Mabel'       ,"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Continental',"descripcion": 'ABO TRASPASO ',"operacion": 'Hubert'      ,"importe": 20.00},
+
+// scotiabank
+{"fecha": '18-06-2021',"medio": 'Scotiabank',"descripcion": 'Deposito en efectivo',"operacion": '784.465.551.4367',"importe": 20.00},
+{"fecha": '18-06-2021',"medio": 'Scotiabank',"descripcion": 'Deposito en efectivo',"operacion": '755.050.001.0019',"importe": 100.00},
+
+{"fecha": '18-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.466.550.0932',"importe": 30.00},
+
+{"fecha": '17-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.466.550.2581',"importe": 100.00},
+{"fecha": '17-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.554.3445',"importe": 10.00},
+{"fecha": '17-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.552.6281',"importe": 30.00},
+
+{"fecha": '16-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.552.0231',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.550.5236',"importe": 50.00},
+{"fecha": '16-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.550.3425',"importe": 20.00},
+
+{"fecha": '15-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.555.4848',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.554.0202',"importe": 150.00},
+{"fecha": '15-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.552.8531',"importe": 20.00},
+{"fecha": '15-06-2021',"medio": 'Scotiabank',"descripcion": 'Depósito efec',"operacion": '360.050.001.0040',"importe": 500.00},
+{"fecha": '15-06-2021',"medio": 'Scotiabank',"descripcion": 'Transferencia',"operacion": '784.465.551.5730',"importe": 20.00},
+
+// interbank
+{"fecha": '20-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'dom. 20 jun 15:33',"importe": 500.00},
+
+{"fecha": '17-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'jue. 17 jun 17:05',"importe": 100.00},
+
+{"fecha": '16-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mie. 16 jun 22:19',"importe": 250.00},
+{"fecha": '16-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mie. 16 jun 16:14',"importe": 200.00},
+{"fecha": '16-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mie. 16 jun 14:38',"importe": 20.00},
+{"fecha": '16-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mie. 16 jun 13:53',"importe": 500.00},
+{"fecha": '16-06-2021',"medio": 'Interbank',"descripcion": 'PAGO REMESA     ',"operacion": 'mie. 16 jun 09:56',"importe": 300.00},
+      
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mar. 15 jun 22:01',"importe": 30.00},
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mar. 15 jun 21:14',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mar. 15 jun 20:30',"importe": 100.00},
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mar. 15 jun 19:44',"importe": 50.00},
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'DEPOSITO AGENTE ',"operacion": 'mar. 15 jun 13:46',"importe": 70.00},
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mar. 15 jun 12:15',"importe": 10.00},
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'DEPOSITO CAJERO ',"operacion": 'mar. 15 jun 11:54',"importe": 70.00},
+{"fecha": '15-06-2021',"medio": 'Interbank',"descripcion": 'TRANSF WEB/APP  ',"operacion": 'mar. 15 jun 11:46',"importe": 30.00},
+
+]
 
       $('#formHistoria').hide();
       $('#formCuentas').show();
@@ -657,6 +282,12 @@
             caption: 'Id',
             dataField: '_id',
             visible: false,
+          },
+          {
+            caption: 'Fecha',
+            dataField: 'fecha',
+            dataType: 'string',
+            //width: 150,
           },
           {
             caption: 'Medio de Pago',
